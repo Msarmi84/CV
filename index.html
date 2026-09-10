@@ -25,6 +25,7 @@
     <!--[if lt IE 9]>
             <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
         <![endif]-->
+  
 </head>
 
 <body id="home">
@@ -46,6 +47,11 @@
                 class="navigation-toggle-bars navigation-toggle-bars-light"></span> <span
                 class="navigation-toggle-bars navigation-toggle-bars-light"></span></span></button>
     <!-- navigation button end -->
+    <!-- language switch start -->
+    <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div><!-- language switch end -->
     <!-- navigation overlay start -->
     <div class="navigation-overlay"></div><!-- navigation overlay end -->
     <!-- navigation start -->
@@ -57,25 +63,25 @@
                 <!-- navigation menu start -->
                 <ul class="menu main-menu">
                     <li class="menu-item">
-                        <a class="menu-link" data-scroll-section="home" href="#">Home</a>
+                        <a class="menu-link" data-scroll-section="home" data-i18n="nav.home" href="#">Home</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" data-scroll-section="about" href="#">About</a>
+                        <a class="menu-link" data-scroll-section="about" data-i18n="nav.about" href="#">About</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" data-scroll-section="WhatIdo" href="#">What I do</a>
+                        <a class="menu-link" data-scroll-section="WhatIdo" data-i18n="nav.whatido" href="#">What I do</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" data-scroll-section="works" href="#">Works</a>
+                        <a class="menu-link" data-scroll-section="works" data-i18n="nav.works" href="#">Works</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" data-scroll-section="contact" href="#">Contact</a>
+                        <a class="menu-link" data-scroll-section="contact" data-i18n="nav.contact" href="#">Contact</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" data-scroll-section="hobby" href="#">Outside the screen</a>
+                        <a class="menu-link" data-scroll-section="hobby" data-i18n="nav.hobby" href="#">Outside the screen</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" data-scroll-section="cv" href="output/pdf/maria-sarmiento-cv.pdf" download>Download CV</a>
+                        <a class="menu-link" data-scroll-section="cv" data-i18n="nav.cv" href="output/pdf/maria-sarmiento-cv.pdf" download>Download CV</a>
                     </li>
                 </ul><!-- navigation menu end -->
                 <!-- navigation social icons start -->
@@ -111,9 +117,9 @@
                 <div class="home-page-subtitle-carousel owl-carousel">
                     <div class="home-page-slide">
                         <h2 class="home-page-title">
-                            <a data-scroll-to="about" href="#">Frontend Development</a>
+                            <a data-scroll-to="about" href="#" data-i18n="hero.frontend.title">Frontend Development</a>
                         </h2>
-                        <p class="home-page-subtitle-text"><span class="tok-prompt">$</span><span
+                        <p class="home-page-subtitle-text" data-i18n="hero.frontend.code"><span class="tok-prompt">$</span><span
                                 class="tok-kw">const</span> <span class="tok-var">frontend</span> = <span
                                 class="tok-str">"I build responsive and functional websites, turning ideas and designs
                                 into clean, interactive digital experiences through modern frontend
@@ -122,9 +128,9 @@
 
                     <div class="home-page-slide">
                         <h2 class="home-page-title">
-                            <a data-scroll-to="about" href="#">UI/Web Design</a>
+                            <a data-scroll-to="about" href="#" data-i18n="hero.ui.title">UI/Web Design</a>
                         </h2>
-                        <p class="home-page-subtitle-text"><span class="tok-prompt">$</span><span
+                        <p class="home-page-subtitle-text" data-i18n="hero.ui.code"><span class="tok-prompt">$</span><span
                                 class="tok-kw">const</span> <span class="tok-var">uiDesign</span> = <span
                                 class="tok-str">"I design clear and intuitive interfaces with a focus on usability,
                                 visual hierarchy and responsive experiences across different devices."</span>;<span
@@ -133,9 +139,9 @@
 
                     <div class="home-page-slide">
                         <h2 class="home-page-title">
-                            <a data-scroll-to="about" href="#">Visual Design</a>
+                            <a data-scroll-to="about" href="#" data-i18n="hero.visual.title">Visual Design</a>
                         </h2>
-                        <p class="home-page-subtitle-text"><span class="tok-prompt">$</span><span
+                        <p class="home-page-subtitle-text" data-i18n="hero.visual.code"><span class="tok-prompt">$</span><span
                                 class="tok-kw">const</span> <span class="tok-var">visualDesign</span> = <span
                                 class="tok-str">"With a background in Advertising and Public Relations, I create visual
                                 solutions that combine creativity, communication and a strong sense of
@@ -153,13 +159,13 @@
             <div class="container">
                 <!-- row start -->
                 <div class="row alt">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-i18n="sec.about">
                         About
                     </h2>
                 </div><!-- row end -->
                 <!-- row start -->
                 <div class="row">
-                    <div class="section-all-subtitle">
+                    <div class="section-all-subtitle" data-i18n="sub.about">
                         <span class="section-all-subtitle-first">I’m a Frontend Developer and Digital
                             Designer</span><br>
                         with a background in Advertising and Public Relations, passionate about creating digital
@@ -177,7 +183,7 @@
                                 <span class="code-dot code-dot-green"></span>
                                 <span class="code-card-name">about.js</span>
                             </div>
-                            <div class="code-card-body"><span class="tok-prompt">$</span><span
+                            <div class="code-card-body" data-i18n="about.code"><span class="tok-prompt">$</span><span
                                     class="tok-kw">const</span> <span class="tok-var">about</span> = <span
                                     class="tok-str">"I believe the best digital experiences happen when thoughtful
                                     design meets purposeful code."</span>;<span class="tok-cursor"></span></div>
@@ -187,18 +193,18 @@
                     <div class="divider-post"></div><!-- divider end -->
                     <!-- col right start -->
                     <div class="col-md-8">
-                        <h3 class="section-all-subtitle-second">
+                        <h3 class="section-all-subtitle-second" data-i18n="about.since">
                             Since 2021...
                         </h3>
-                        <p>
+                        <p data-i18n="about.p1">
                             I’ve been working professionally in web development, building and maintaining responsive
                             websites and digital applications using PHP, JavaScript, Bootstrap, HTML5 and CSS3.
                         </p>
-                        <p>
+                        <p data-i18n="about.p2">
                             Alongside development, I work on the creative and visual side of digital projects, designing
                             web interfaces, logos and visual assets with Figma, Photoshop and Illustrator.
                         </p>
-                        <p>
+                        <p data-i18n="about.p3">
                             I enjoy being involved throughout the process — from the initial idea and visual concept to
                             the final implementation. I’m always looking for new ways to learn, experiment and improve,
                             including exploring AI-assisted tools to make my workflow more efficient and creative..<a
@@ -211,7 +217,7 @@
                     <!-- col left start -->
                     <div class="col-md-6">
                         <!-- skills bar start -->
-                        <h3>
+                        <h3 data-i18n="about.tech">
                             Technologies
                         </h3>
                         <div class="show-skillbar">
@@ -299,7 +305,7 @@
                     <!-- col left start -->
                     <div class="col-md-6">
                         <!-- skills bar start -->
-                        <h3>
+                        <h3 data-i18n="about.design">
                             Design
                         </h3>
                         <div class="show-skillbar">
@@ -330,7 +336,7 @@
                             </div><!-- skill 3 end -->
                             <!-- skill 4 start -->
                             <div class="skillbar" data-percent="90">
-                                <span class="skillbar-title">Web Design</span>
+                                <span class="skillbar-title" data-i18n="skill.webdesign">Web Design</span>
                                 <div class="skillbar-bar"></div><span class="skill-bar-percent"></span>
                             </div><!-- skill 4 end -->
                         </div><!-- skills bar end -->
@@ -357,7 +363,7 @@
                         <div class="col-xs-6 col-sm-3">
                             <div class="facts-counter-number" data-to="99" data-symbol="5+">0</div>
                             <div class="facts-counter-description">
-                                <i class="fa fa-briefcase"></i> <span class="facts-counter-title">Years in Web
+                                <i class="fa fa-briefcase"></i> <span class="facts-counter-title" data-i18n="facts.years">Years in Web
                                     Development</span>
                             </div>
                         </div>
@@ -366,20 +372,20 @@
                                 3
                             </div>
                             <div class="facts-counter-description">
-                                <i class="fa fa-book"></i> <span class="facts-counter-title">Areas of Expertise</span>
+                                <i class="fa fa-book"></i> <span class="facts-counter-title" data-i18n="facts.areas">Areas of Expertise</span>
                             </div>
                         </div><!-- clearfix start -->
                         <div class="clearfix visible-xs-block"></div><!-- clearfix end -->
                         <div class="col-xs-6 col-sm-3">
                             <div class="facts-counter-number" data-to="99" data-symbol="4+">0</div>
                             <div class="facts-counter-description">
-                                <i class="fa fa-globe"></i> <span class="facts-counter-title">Core Technologies</span>
+                                <i class="fa fa-globe"></i> <span class="facts-counter-title" data-i18n="facts.tech">Core Technologies</span>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-3">
                             <div class="facts-counter-number" data-to="99" data-symbol="&#8734;">0</div>
                             <div class="facts-counter-description">
-                                <i class="fa fa-lightbulb-o"></i> <span class="facts-counter-title">Ideas &
+                                <i class="fa fa-lightbulb-o"></i> <span class="facts-counter-title" data-i18n="facts.ideas">Ideas &
                                     Creativity</span>
                             </div>
                         </div>
@@ -393,13 +399,13 @@
             <div class="container">
                 <!-- row start -->
                 <div class="row alt">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-i18n="sec.whatido">
                         What I do
                     </h2>
                 </div><!-- row end -->
                 <!-- row start -->
                 <div class="row">
-                    <div class="section-all-subtitle">
+                    <div class="section-all-subtitle" data-i18n="sub.whatido">
                         <span class="section-all-subtitle-first">I combine development, design and visual
                             communication</span><br>
                         to create digital experiences from concept to implementation.
@@ -412,10 +418,10 @@
                         <div class="services-img">
                             <span class="fa fa-eyedropper"></span>
                         </div>
-                        <h3 class="services-title">
+                        <h3 class="services-title" data-i18n="srv.brand.t">
                             Brand Identity
                         </h3>
-                        <div class="services-description">
+                        <div class="services-description" data-i18n="srv.brand.d">
                             Developing logos and visual identities that give brands a distinctive and coherent presence.
                         </div>
                     </div><!-- col left end -->
@@ -424,10 +430,10 @@
                         <div class="services-img">
                             <span class="fa fa-paint-brush"></span>
                         </div>
-                        <h3 class="services-title">
+                        <h3 class="services-title" data-i18n="srv.visual.t">
                             Visual Design
                         </h3>
-                        <div class="services-description">
+                        <div class="services-description" data-i18n="srv.visual.d">
                             Creating digital assets, graphic pieces and visual systems that communicate clearly and
                             consistently.
                         </div>
@@ -437,10 +443,10 @@
                         <div class="services-img">
                             <span class="fa fa-desktop"></span>
                         </div>
-                        <h3 class="services-title">
+                        <h3 class="services-title" data-i18n="srv.web.t">
                             Web Design & UI Design
                         </h3>
-                        <div class="services-description">
+                        <div class="services-description" data-i18n="srv.web.d">
                             Designing clean, intuitive interfaces with a focus on usability, visual hierarchy and
                             responsive experiences.
                         </div>
@@ -450,10 +456,10 @@
                         <div class="services-img">
                             <span class="fa fa-code"></span>
                         </div>
-                        <h3 class="services-title">
+                        <h3 class="services-title" data-i18n="srv.front.t">
                             Frontend Development
                         </h3>
-                        <div class="services-description services-description-last">
+                        <div class="services-description services-description-last" data-i18n="srv.front.d">
                             Building responsive, accessible and functional websites using HTML, CSS, JavaScript, PHP and
                             Bootstrap.
                         </div>
@@ -467,13 +473,13 @@
             <div class="container">
                 <!-- row start -->
                 <div class="row alt">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-i18n="sec.works">
                         Works
                     </h2>
                 </div><!-- row end -->
                 <!-- row start -->
                 <div class="row">
-                    <div class="section-all-subtitle">
+                    <div class="section-all-subtitle" data-i18n="sub.works">
                         <span class="section-all-subtitle-first">A showcase of functional websites and modern
                             interfaces.</span><br>
                         Built with clean structure, interactive details, and careful design.
@@ -487,11 +493,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/1.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/1.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Toys for kids</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.1">Toys for kids</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -503,11 +509,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/2.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/2.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Toys for kids</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.2">Toys for kids</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -519,11 +525,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/3.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/3.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Company Landing page</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.3">Company Landing page</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -535,11 +541,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/4.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/4.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Sports clothes and equipements</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.4">Sports clothes and equipements</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -551,11 +557,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/5.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/5.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Toys for kids Shop</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.5">Toys for kids Shop</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -567,11 +573,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/6.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/6.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Makeup Products Shop</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.6">Makeup Products Shop</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -583,11 +589,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/7.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/7.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Makeup Product Shop</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.7">Makeup Product Shop</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -599,11 +605,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/8.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/8.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Pets Shop</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.8">Pets Shop</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -615,11 +621,11 @@
                     <a class="effect-bubba-photos" data-size="1920x1280" href="photoswipe/photos/large/9.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/9.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="works-info">
-                            <h3 class="works-info-name">Clothes for kids Shop</h3>
-                            <p class="works-info-role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
+                            <h3 class="works-info-name" data-i18n="work.9">Clothes for kids Shop</h3>
+                            <p class="works-info-role" data-i18n="works.role">Web Design · Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation.</p>
                         </div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -711,13 +717,13 @@
             <div class="container">
                 <!-- row start -->
                 <div class="row alt">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-i18n="sec.hobby">
                         Outside the screen
                     </h2>
                 </div><!-- row end -->
                 <!-- row start -->
                 <div class="row">
-                    <div class="section-all-subtitle">
+                    <div class="section-all-subtitle" data-i18n="sub.hobby">
                         <span class="section-all-subtitle-first">When I'm not designing interfaces or writing code, I paint.</span><br>
                         Acrylic painting is my creative escape — a place where I experiment with colour, composition and shapes without pixels, grids or breakpoints.
                     </div>
@@ -730,7 +736,7 @@
                     <a class="effect-bubba-photos" data-size="863x1280" href="photoswipe/photos/large/10.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/10.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -742,7 +748,7 @@
                     <a class="effect-bubba-photos" data-size="863x1280" href="photoswipe/photos/large/11.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/11.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -754,7 +760,7 @@
                     <a class="effect-bubba-photos" data-size="863x1280" href="photoswipe/photos/large/12.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/12.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -766,7 +772,7 @@
                     <a class="effect-bubba-photos" data-size="863x1280" href="photoswipe/photos/large/13.jpg"><img
                             alt="Image description" class="img-responsive" src="photoswipe/photos/small/13.jpg"></a>
                     <figcaption>
-                        <span class="img-caption">Work</span>
+                        <span class="img-caption" data-i18n="works.caption">Work</span>
                         <div class="hover-effect"></div>
                         <div class="icon-works">
                             <a class="iw-slide-right fa fa-plus" href="#"></a>
@@ -782,13 +788,13 @@
             <div class="container">
                 <!-- row start -->
                 <div class="row alt">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-i18n="sec.contact">
                         Contact
                     </h2>
                 </div><!-- row end -->
                 <!-- row start -->
                 <div class="row">
-                    <div class="section-all-subtitle">
+                    <div class="section-all-subtitle" data-i18n="sub.contact">
                         <span class="section-all-subtitle-first">Interested in working together or exploring new
                             opportunities?</span><br>
                         Let’s connect.
@@ -803,7 +809,7 @@
                         <!-- col center start -->
                         <div class="col-md-4">
                             <!-- contact details start -->
-                            <span class="footer-contact-block-label">Phone:</span> (+34) 671 428 059
+                            <span class="footer-contact-block-label" data-i18n="contact.phone">Phone:</span> (+34) 671 428 059
                             <!-- contact details end -->
                         </div><!-- col center end -->
                         <!-- divider start -->
@@ -811,13 +817,13 @@
                         <!-- col right start -->
                         <div class="col-md-4">
                             <!-- contact details start -->
-                            <span class="footer-contact-block-label">Email:</span> <a class="email"
+                            <span class="footer-contact-block-label" data-i18n="contact.email">Email:</span> <a class="email"
                                 href="mailto:msarmi84@hotmail.com">msarmi84@hotmail.com</a>
                             <!-- contact details end -->
                         </div><!-- col right end -->
                     </div>
                     <div class="cv-download-wrap">
-                        <a class="cv-download" id="cv" href="output/pdf/maria-sarmiento-cv.pdf" download>
+                        <a class="cv-download" id="cv" data-i18n="contact.cv" href="output/pdf/maria-sarmiento-cv.pdf" download>
                             <span class="fa fa-download" aria-hidden="true"></span> Download CV
                         </a>
                     </div>
@@ -849,7 +855,7 @@
                             </ul>
                         </div><!-- social icons footer end -->
                         <div class="lineOT-footer"></div><!-- copyrights start -->
-                        <div class="copy">
+                        <div class="copy" data-i18n="footer.rights">
                             &copy; All rights reserved.
                         </div><!-- copyrights end -->
                     </div>
@@ -909,6 +915,168 @@
 
 
 
+    <!-- language switch script start -->
+    <script>
+        (function () {
+            var I18N = {
+        "en": {
+                "about.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">about</span> = <span class=\"tok-str\">\"I believe the best digital experiences happen when thoughtful design meets purposeful code.\"</span>;<span class=\"tok-cursor\"></span>",
+                "about.design": "Design",
+                "about.p1": "I&rsquo;ve been working professionally in web development, building and maintaining responsive websites and digital applications using PHP, JavaScript, Bootstrap, HTML5 and CSS3.",
+                "about.p2": "Alongside development, I work on the creative and visual side of digital projects, designing web interfaces, logos and visual assets with Figma, Photoshop and Illustrator.",
+                "about.p3": "I enjoy being involved throughout the process &mdash; from the initial idea and visual concept to the final implementation. I&rsquo;m always looking for new ways to learn, experiment and improve, including exploring AI-assisted tools to make my workflow more efficient and creative.<a class=\"section-links\" data-scroll-to=\"works\" href=\"#\"> See some of my works</a>.",
+                "about.since": "Since 2021...",
+                "about.tech": "Technologies",
+                "contact.cv": "<span class=\"fa fa-download\" aria-hidden=\"true\"></span> Download CV",
+                "contact.email": "Email:",
+                "contact.phone": "Phone:",
+                "facts.areas": "Areas of Expertise",
+                "facts.ideas": "Ideas &amp; Creativity",
+                "facts.tech": "Core Technologies",
+                "facts.years": "Years in Web Development",
+                "footer.rights": "&copy; All rights reserved.",
+                "hero.frontend.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">frontend</span> = <span class=\"tok-str\">\"I build responsive and functional websites, turning ideas and designs into clean, interactive digital experiences through modern frontend technologies.\"</span>;<span class=\"tok-cursor\"></span>",
+                "hero.frontend.title": "Frontend Development",
+                "hero.ui.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">uiDesign</span> = <span class=\"tok-str\">\"I design clear and intuitive interfaces with a focus on usability, visual hierarchy and responsive experiences across different devices.\"</span>;<span class=\"tok-cursor\"></span>",
+                "hero.ui.title": "UI/Web Design",
+                "hero.visual.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">visualDesign</span> = <span class=\"tok-str\">\"With a background in Advertising and Public Relations, I create visual solutions that combine creativity, communication and a strong sense of aesthetics.\"</span>;<span class=\"tok-cursor\"></span>",
+                "hero.visual.title": "Visual Design",
+                "nav.about": "About",
+                "nav.contact": "Contact",
+                "nav.cv": "Download CV",
+                "nav.hobby": "Outside the screen",
+                "nav.home": "Home",
+                "nav.whatido": "What I do",
+                "nav.works": "Works",
+                "sec.about": "About",
+                "sec.contact": "Contact",
+                "sec.hobby": "Outside the screen",
+                "sec.whatido": "What I do",
+                "sec.works": "Works",
+                "skill.webdesign": "Web Design",
+                "srv.brand.d": "Developing logos and visual identities that give brands a distinctive and coherent presence.",
+                "srv.brand.t": "Brand Identity",
+                "srv.front.d": "Building responsive, accessible and functional websites using HTML, CSS, JavaScript, PHP and Bootstrap.",
+                "srv.front.t": "Frontend Development",
+                "srv.visual.d": "Creating digital assets, graphic pieces and visual systems that communicate clearly and consistently.",
+                "srv.visual.t": "Visual Design",
+                "srv.web.d": "Designing clean, intuitive interfaces with a focus on usability, visual hierarchy and responsive experiences.",
+                "srv.web.t": "Web Design &amp; UI Design",
+                "sub.about": "<span class=\"section-all-subtitle-first\">I&rsquo;m a Frontend Developer and Digital Designer</span><br>with a background in Advertising and Public Relations, passionate about creating digital experiences where design, technology and creativity come together.",
+                "sub.contact": "<span class=\"section-all-subtitle-first\">Interested in working together or exploring new opportunities?</span><br>Let&rsquo;s connect.",
+                "sub.hobby": "<span class=\"section-all-subtitle-first\">When I'm not designing interfaces or writing code, I paint.</span><br>Acrylic painting is my creative escape &mdash; a place where I experiment with colour, composition and shapes without pixels, grids or breakpoints.",
+                "sub.whatido": "<span class=\"section-all-subtitle-first\">I combine development, design and visual communication</span><br>to create digital experiences from concept to implementation.",
+                "sub.works": "<span class=\"section-all-subtitle-first\">A showcase of functional websites and modern interfaces.</span><br>Built with clean structure, interactive details, and careful design.",
+                "work.1": "Toys for kids",
+                "work.2": "Toys for kids",
+                "work.3": "Company Landing page",
+                "work.4": "Sports clothes and equipements",
+                "work.5": "Toys for kids Shop",
+                "work.6": "Makeup Products Shop",
+                "work.7": "Makeup Product Shop",
+                "work.8": "Pets Shop",
+                "work.9": "Clothes for kids Shop",
+                "works.caption": "Work",
+                "works.role": "Web Design &middot; Frontend Development <br>A responsive website built from concept to deployment, featuring clear visual hierarchy and intuitive navigation."
+        },
+        "es": {
+                "about.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">about</span> = <span class=\"tok-str\">\"Creo que las mejores experiencias digitales nacen cuando un diseño bien pensado se encuentra con código con propósito.\"</span>;<span class=\"tok-cursor\"></span>",
+                "about.design": "Diseño",
+                "about.p1": "Trabajo profesionalmente en desarrollo web, construyendo y manteniendo webs responsive y aplicaciones digitales con PHP, JavaScript, Bootstrap, HTML5 y CSS3.",
+                "about.p2": "Además del desarrollo, me ocupo de la parte creativa y visual de los proyectos digitales, diseñando interfaces web, logotipos y recursos gráficos con Figma, Photoshop e Illustrator.",
+                "about.p3": "Disfruto participando en todo el proceso &mdash; desde la idea inicial y el concepto visual hasta la implementación final. Siempre busco nuevas formas de aprender, experimentar y mejorar, incluido el uso de herramientas con IA para hacer mi flujo de trabajo más eficiente y creativo.<a class=\"section-links\" data-scroll-to=\"works\" href=\"#\"> Mira algunos de mis trabajos</a>.",
+                "about.since": "Desde 2021...",
+                "about.tech": "Tecnologías",
+                "contact.cv": "<span class=\"fa fa-download\" aria-hidden=\"true\"></span> Descargar CV",
+                "contact.email": "Email:",
+                "contact.phone": "Teléfono:",
+                "facts.areas": "Áreas de especialidad",
+                "facts.ideas": "Ideas y creatividad",
+                "facts.tech": "Tecnologías principales",
+                "facts.years": "Años en desarrollo web",
+                "footer.rights": "&copy; Todos los derechos reservados.",
+                "hero.frontend.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">frontend</span> = <span class=\"tok-str\">\"Desarrollo webs responsive y funcionales, convirtiendo ideas y diseños en experiencias digitales limpias e interactivas con tecnologías frontend modernas.\"</span>;<span class=\"tok-cursor\"></span>",
+                "hero.frontend.title": "Desarrollo Frontend",
+                "hero.ui.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">uiDesign</span> = <span class=\"tok-str\">\"Diseño interfaces claras e intuitivas centradas en la usabilidad, la jerarquía visual y las experiencias responsive en distintos dispositivos.\"</span>;<span class=\"tok-cursor\"></span>",
+                "hero.ui.title": "Diseño UI/Web",
+                "hero.visual.code": "<span class=\"tok-prompt\">$</span><span class=\"tok-kw\">const</span> <span class=\"tok-var\">visualDesign</span> = <span class=\"tok-str\">\"Con formación en Publicidad y Relaciones Públicas, creo soluciones visuales que combinan creatividad, comunicación y un fuerte sentido de la estética.\"</span>;<span class=\"tok-cursor\"></span>",
+                "hero.visual.title": "Diseño Visual",
+                "nav.about": "Sobre mí",
+                "nav.contact": "Contacto",
+                "nav.cv": "Descargar CV",
+                "nav.hobby": "Fuera de la pantalla",
+                "nav.home": "Inicio",
+                "nav.whatido": "Qué hago",
+                "nav.works": "Proyectos",
+                "sec.about": "Sobre mí",
+                "sec.contact": "Contacto",
+                "sec.hobby": "Fuera de la pantalla",
+                "sec.whatido": "Qué hago",
+                "sec.works": "Proyectos",
+                "skill.webdesign": "Diseño Web",
+                "srv.brand.d": "Desarrollo logotipos e identidades visuales que dan a las marcas una presencia distintiva y coherente.",
+                "srv.brand.t": "Identidad de marca",
+                "srv.front.d": "Desarrollo webs responsive, accesibles y funcionales con HTML, CSS, JavaScript, PHP y Bootstrap.",
+                "srv.front.t": "Desarrollo Frontend",
+                "srv.visual.d": "Creo recursos digitales, piezas gráficas y sistemas visuales que comunican de forma clara y coherente.",
+                "srv.visual.t": "Diseño visual",
+                "srv.web.d": "Diseño interfaces limpias e intuitivas centradas en la usabilidad, la jerarquía visual y las experiencias responsive.",
+                "srv.web.t": "Diseño Web y UI",
+                "sub.about": "<span class=\"section-all-subtitle-first\">Soy Desarrolladora Frontend y Diseñadora Digital</span><br>con formación en Publicidad y Relaciones Públicas, apasionada por crear experiencias digitales donde el diseño, la tecnología y la creatividad se encuentran.",
+                "sub.contact": "<span class=\"section-all-subtitle-first\">¿Te interesa que trabajemos juntos o explorar nuevas oportunidades?</span><br>Hablemos.",
+                "sub.hobby": "<span class=\"section-all-subtitle-first\">Cuando no estoy diseñando interfaces ni escribiendo código, pinto.</span><br>La pintura acrílica es mi escape creativo &mdash; un lugar donde experimento con el color, la composición y las formas sin píxeles, rejillas ni breakpoints.",
+                "sub.whatido": "<span class=\"section-all-subtitle-first\">Combino desarrollo, diseño y comunicación visual</span><br>para crear experiencias digitales desde el concepto hasta la implementación.",
+                "sub.works": "<span class=\"section-all-subtitle-first\">Una selección de webs funcionales e interfaces modernas.</span><br>Construidas con una estructura limpia, detalles interactivos y un diseño cuidado.",
+                "work.1": "Juguetes para niños",
+                "work.2": "Juguetes para niños",
+                "work.3": "Landing page corporativa",
+                "work.4": "Ropa y equipamiento deportivo",
+                "work.5": "Tienda de juguetes",
+                "work.6": "Tienda de maquillaje",
+                "work.7": "Tienda de maquillaje",
+                "work.8": "Tienda de mascotas",
+                "work.9": "Tienda de ropa infantil",
+                "works.caption": "Proyecto",
+                "works.role": "Diseño Web &middot; Desarrollo Frontend <br>Una web responsive desarrollada desde el concepto hasta la publicación, con una jerarquía visual clara y una navegación intuitiva."
+        }
+};
+
+            var KEY = 'ms-lang';
+
+            function apply(lang) {
+                var dict = I18N[lang] || I18N.en;
+                var nodes = document.querySelectorAll('[data-i18n]');
+                for (var i = 0; i < nodes.length; i++) {
+                    var k = nodes[i].getAttribute('data-i18n');
+                    if (dict[k] != null) { nodes[i].innerHTML = dict[k]; }
+                }
+                document.documentElement.setAttribute('lang', lang);
+                var btns = document.querySelectorAll('.lang-switch button');
+                for (var j = 0; j < btns.length; j++) {
+                    btns[j].setAttribute('aria-pressed',
+                        btns[j].getAttribute('data-lang') === lang ? 'true' : 'false');
+                }
+                try { localStorage.setItem(KEY, lang); } catch (e) { }
+            }
+
+            document.addEventListener('click', function (e) {
+                var el = e.target;
+                while (el && el !== document) {
+                    if (el.classList && el.classList.contains('lang-switch')) { break; }
+                    if (el.tagName === 'BUTTON' && el.getAttribute('data-lang')) {
+                        apply(el.getAttribute('data-lang'));
+                        return;
+                    }
+                    el = el.parentNode;
+                }
+            });
+
+            var saved = null;
+            try { saved = localStorage.getItem(KEY); } catch (e) { }
+            var browser = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+            apply(saved || (browser.indexOf('es') === 0 ? 'es' : 'en'));
+        })();
+    </script><!-- language switch script end -->
 </body>
 
 </html>
