@@ -1672,7 +1672,7 @@ a.main-navigation-logo-img:hover {
   width: 80px;
   height: 5px;
   left: 0;
-  top: 130px;
+  top: 109px;
   background-color: #111;
 }
 
@@ -1851,9 +1851,107 @@ h1.home-page-title {
   z-index: 1;
 }
 
-h1.home-page-title.light {
-  color: #111;
+/* hero subtitle - terminal / code line */
+.home-page-subtitle-text {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  color: #c9d1d9;
+  max-width: 680px;
+  margin: 24px auto 0;
+  padding: 14px 18px;
+  background: rgba(13, 17, 23, .72);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  word-break: break-word;
 }
+
+.tok-prompt {
+  color: #7ee787;
+  margin-right: 6px;
+}
+
+.tok-kw {
+  color: #ff7b72;
+}
+
+.tok-var {
+  color: #79c0ff;
+}
+
+.tok-str {
+  color: #a5d6ff;
+}
+
+.tok-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  margin-left: 3px;
+  vertical-align: -2px;
+  background: #7ee787;
+  animation: hpBlink 1.05s steps(1) infinite;
+}
+/* code card - about */
+.code-card {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12.5px;
+  line-height: 1.8;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  color: #c9d1d9;
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+}
+
+.code-card-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: #161b22;
+  border-bottom: 1px solid #21262d;
+}
+
+.code-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+.code-dot-red    { background: #ff5f56; }
+.code-dot-yellow { background: #ffbd2e; }
+.code-dot-green  { background: #27c93f; }
+
+.code-card-name {
+  margin-left: 8px;
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: #8b949e;
+}
+
+.code-card-body {
+  padding: 16px 18px 18px;
+  word-break: break-word;
+}
+@keyframes hpBlink {
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 
 @media only screen and (max-width: 1200px) {
   h1.home-page-title {
@@ -1917,7 +2015,7 @@ h2.home-page-title.light a {
 
 .alt h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 105px;
+  font-size: 90px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -1930,7 +2028,7 @@ h2.home-page-title.light a {
 
 @media only screen and (max-width: 1200px) {
   .alt h2 {
-    font-size: 85px;
+    font-size: 65px;
     padding: 0 10px;
   }
 }
@@ -2391,7 +2489,48 @@ h3 {
   position: relative;
   z-index: 5 !important;
 }
+/* works - hover info */
+.legendary-gallery .works-info {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-6px);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity .35s ease-out;
+  z-index: 2;
+  pointer-events: none;
+}
 
+.legendary-gallery .image-works:hover .works-info { opacity: 1; }
+
+.works-info-name {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #fff;
+  margin: 0;
+}
+
+.works-info-role {
+  font-family: Raleway, sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, .8);
+  margin: 8px 0 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.legendary-gallery .works-info ~ .icon-works { margin-top: -58px; }
+
+
+.pswp__caption .works-info { display: none; }
 .hover-effect {
   position: absolute;
   background: #000;
@@ -2670,6 +2809,37 @@ h3 {
 
 .section-contact-subtitle-first {
   color: #20202c;
+}
+
+.cv-download-wrap {
+  margin: 88px 0 0;
+    text-align: left;
+}
+
+.section .cv-download,
+.section .cv-download:hover,
+.section .cv-download:focus {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid #111;
+  color: #fff;
+  background: #111;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+.section .cv-download:hover,
+.section .cv-download:focus {
+  color: #111;
+  background: #fff;
+}
+
+.cv-download .fa {
+  margin-right: 8px;
 }
 
 
@@ -3726,7 +3896,7 @@ source {
 
 #video-lightbox video,
 #video-lightbox iframe {
-  position: static;      
+  position: static;
   min-width: 0;
   min-height: 0;
   bottom: auto;

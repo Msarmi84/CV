@@ -159,9 +159,8 @@ $(function() {
 	
     // 8. home fadeOut animation
     $(window).on("scroll", function() {
-        $("h1.home-page-title, h2.home-page-title, h3.home-page-title, .play-video-btn").css("opacity", 1 - $(window).scrollTop() / $(".hero-fullscreen, #viewport").height());
+        $("h1.home-page-title, h2.home-page-title, h3.home-page-title, .home-page-subtitle-text, .play-video-btn").css("opacity", 1 - $(window).scrollTop() / $(".hero-fullscreen, #viewport").height());
     });
-	
     // 9. contact form
     $("form#form").on("submit", function() {
         $("form#form .error").remove();
@@ -353,3 +352,92 @@ window.addEvent("domready", function() {
         wallFluid.initWall();
     }, 500);
 });
+// 17. Lightbox: videos in Works / images in Hobby
+(function () {
+
+    var VIDEO_FOLDER = 'videos/';
+    var VIDEO_EXT    = '.mp4';
+    var PLUS_SELECTOR = 'a.iw-slide-right.fa.fa-plus';
+    // Sections where the "+" icon opens the IMAGE (PhotoSwipe) instead of a video.
+    // To add more: '#hobby, #another-section'
+    var IMAGE_SECTIONS = '#hobby';
+
+    var box   = null;
+    var video = null;
+
+    // The #video-lightbox div sits AFTER this script in the HTML,
+    // so we look it up the first time it is actually needed.
+    function cacheNodes() {
+        if (video) return true;
+        box   = document.getElementById('video-lightbox');
+        video = box ? box.querySelector('video') : null;
+        return !!video;
+    }
+
+    function getVideoPath(link) {
+        var fig = link.closest('figure') || link.parentElement;
+        var manual = link.getAttribute('data-video') ||
+                     (fig && fig.getAttribute && fig.getAttribute('data-video'));
+        if (manual) return manual;
+        var img = fig && fig.querySelector ? fig.querySelector('img') : null;
+        var m = img && (img.getAttribute('src') || '').match(/(\d+)\.\w+$/);
+        return m ? VIDEO_FOLDER + m[1] + VIDEO_EXT : null;
+    }
+
+    function openVideo(src) {
+        if (!cacheNodes()) return;
+        video.src = src;
+        box.classList.add('is-open');
+        box.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        var p = video.play();
+        if (p && p.catch) p.catch(function () {});
+    }
+
+    function closeVideo() {
+        if (!video) return;
+        video.pause();
+        video.removeAttribute('src');
+        video.load();
+        box.classList.remove('is-open');
+        box.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    // Forward the click to the image link so PhotoSwipe handles it
+    function openImage(link) {
+        var fig = link.closest('figure');
+        var imageLink = fig ? fig.querySelector('a.effect-bubba-photos') : null;
+        if (imageLink) imageLink.click();
+    }
+
+    document.addEventListener('click', function (e) {
+        var link = e.target.closest ? e.target.closest(PLUS_SELECTOR) : null;
+        if (!link) return;
+
+        // --- Hobby: images ---
+        if (link.closest(IMAGE_SECTIONS)) {
+            e.preventDefault();
+            e.stopPropagation();
+            openImage(link);
+            return;
+        }
+
+        // --- Works: videos ---
+        var src = getVideoPath(link);
+        if (!src) return;
+        e.preventDefault();
+        e.stopPropagation();
+        openVideo(src);
+    }, true);
+
+    document.addEventListener('click', function (e) {
+        if (!box || !box.classList.contains('is-open')) return;
+        if (e.target === box || (e.target.classList && e.target.classList.contains('vl-close'))) closeVideo();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && box && box.classList.contains('is-open')) closeVideo();
+    });
+
+})();
