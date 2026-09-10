@@ -2367,7 +2367,7 @@ h3 {
 
 @media only screen and (max-width: 880px) {
   .section-works {
-    padding: 105px 0 95px 0;
+    padding: 0 0 95px 0;
   }
 }
 
@@ -2779,7 +2779,7 @@ h3 {
 
 @media only screen and (max-width: 880px) {
   .section-contact {
-    padding: 105px 0 110px 0;
+    padding: 0px 0 110px 0;
   }
 }
 
